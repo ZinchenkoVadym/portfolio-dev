@@ -1,98 +1,115 @@
 .section__contacts {
   background-color: #1c1c1c;
-.container__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px 15px;
-  .contacts__form {
-    flex: 1 1 50%;
-    .contacts__form__body{
-      width: 90%;
-    .text__form {
+    padding-top: 50px;
+    margin-top: -50px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
 
-    h3 {
-      color: whitesmoke;
-      font-size: 34px;
-      margin-bottom: 20px;
-    }
+  .container__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 15px;
 
-      p {
-        color: rgba(107,107,107,0.86);
-        font-size: 20px;
-        letter-spacing: 1px;
-        line-height: 32px;
-        margin-bottom: 20px;
-      }
-    }
+    .contacts__form {
+      flex: 1 1 50%;
 
-    .form {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-     .input__form {
-       background: none;
-       border: 2px solid rgba(107,107,107,0.86);
-       border-radius: 5px;
-       margin-bottom: 25px;
-       padding: 10px 15px;
-       color: rgba(107, 107, 107, 0.86);
-     }
+      .contacts__form__body {
+        width: 90%;
 
-      .textarea__form {
-        background: none;
-        border: 2px solid rgba(107, 107, 107, 0.86);
-        border-radius: 5px;
-        height: 100px;
-        padding: 10px;
-        margin-bottom: 30px;
-        color: rgba(107, 107, 107, 0.86);
-      }
+        .text__form {
 
-      button {
-        padding: 10px 20px;
-        color: whitesmoke;
-        font-size: 16px;
-        background-color: #f9004d;
-        border: 3px solid #f9004d;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: 0.5s;
+          h3 {
+            color: whitesmoke;
+            font-size: 34px;
+            margin-bottom: 20px;
+          }
 
-        &:hover {
-          background: none;
-          transition: 0.5s;
+          p {
+            color: rgba(107, 107, 107, 0.86);
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 20px;
+          }
+        }
+
+        .form {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          .input__form {
+            background: none;
+            border: 2px solid rgba(107, 107, 107, 0.86);
+            border-radius: 5px;
+            margin-bottom: 25px;
+            padding: 10px 15px;
+            color: rgba(107, 107, 107, 0.86);
+          }
+
+          .textarea__form {
+            background: none;
+            border: 2px solid rgba(107, 107, 107, 0.86);
+            border-radius: 5px;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 30px;
+            color: rgba(107, 107, 107, 0.86);
+          }
+
+          button {
+            padding: 10px 20px;
+            color: whitesmoke;
+            font-size: 16px;
+            background-color: #f9004d;
+            border: 3px solid #f9004d;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s;
+
+            &:hover {
+              background: none;
+              transition: 0.5s;
+            }
+          }
         }
       }
     }
+
+    .contacts__img {
+      flex: 1 1 50%;
+      background-image: url("../../common/img/contacts_img.jpeg");
+      background-size: cover;
+      border-radius: 20px;
     }
   }
-
-  .contacts__img {
-    flex: 1 1 50%;
-    background-image: url("./CONTA.jpeg");
-    background-size: cover;
-    border-radius: 20px;
-  }
-}
+  //&:before {
+  //  display: block;
+  //  content: "";
+  //  height: 70px;
+  //  margin: -70px 0 0;
+  //}
 }
 
 @media (max-width: 935px) {
   .section__contacts {
     .container__contacts {
       display: block;
+
       .contacts__form {
         width: 90%;
         margin: 0 auto;
         padding-bottom: 30px;
+
         .contacts__form__body {
           width: 100%;
         }
       }
+
       .contacts__img {
         height: 400px;
         width: 90%;
         margin: 0 auto;
       }
-  }
+    }
   }
 }

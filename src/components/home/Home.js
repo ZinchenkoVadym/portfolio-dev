@@ -4,7 +4,7 @@ import './Home.scss'
 
 const Home = () => {
     return (
-                <section className='tab_item section__home' id='home'>
+                <section id='home' className='section section__home'>
                     <div className='container container__home'>
                         <div className='title__home'>
                             <div>

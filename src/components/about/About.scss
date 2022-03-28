@@ -1,8 +1,10 @@
 .section__about {
   background-color: #1c1c1c;
-
+  padding-top: 50px;
+  margin-top: -50px;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
   .container__about {
-
     .about__body {
       display: flex;
       padding: 50px 0;
@@ -12,7 +14,7 @@
         flex: 1 1 50%;
 
         .about__img {
-          background-image: url("./IMG_3269.jpg");
+          background-image: url("../../common/img/my_photo.jpg");
           background-size: cover;
           height: 80vh;
           padding: 20px;
@@ -38,7 +40,6 @@
             font-size: 16px;
             line-height: 18px;
             color: gray;
-            letter-spacing: 1px;
             padding-bottom: 20px;
           }
         }

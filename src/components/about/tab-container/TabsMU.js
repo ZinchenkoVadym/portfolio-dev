@@ -82,6 +82,7 @@ export default function BasicTabs() {
                     <li>Web-pack(basic)</li>
                     <li>MUI</li>
                     <li>jQuery</li>
+                    <li>Redux</li>
                 </ul>
             </TabPanel>
             <TabPanel value={value} index={1}>

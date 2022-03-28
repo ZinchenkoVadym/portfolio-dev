@@ -6,30 +6,10 @@
     transition: 1s;
     letter-spacing: 2px;
     line-height: 26px;
-    &:before {
+      &:before {
       color: #f9004d;
       content: "▪";
       padding-right: 10px;
-    }
-    &:after {
-      display: block;
-      position: absolute;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: #f9004d;
-      content: "";
-      transition: width 1s ease-out;
-    }
-
-    &:hover:after {
-      width: 100%;
-    }
-    &:hover {
-      -webkit-transform: scale(1.02);
-      -ms-transform: scale(1.02);
-      transform: scale(1.02);
-      transition: 1s;
     }
   }
 }
@@ -39,5 +19,10 @@
     font-size: 24px;
     line-height: 28px;
     color: white;
+    &:before {
+      color: #f9004d;
+      content: "▪";
+      padding-right: 10px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 html {
   overflow: scroll;
 }
@@ -24,6 +24,7 @@ p {
   line-height: 20px;
   font-size: 16px;
   font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 1px;
 }
 ul,
 ol,

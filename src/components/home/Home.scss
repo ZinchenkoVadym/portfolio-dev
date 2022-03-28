@@ -1,10 +1,10 @@
 .section__home {
   padding-top: 70px;
-  height: 700px;
-  background-image: url("./img.jpeg");
+  height: 100vh;
+  background-image: url("../../common/img/contacts_img.jpeg");
   background-size: cover;
-  .container__home {
 
+  .container__home {
     .title__home {
       height: 100%;
       display: flex;
@@ -32,7 +32,7 @@
 
 @media (max-width: 900px) {
   .section__home {
-    height: 500px;
+    height: 100vh;
     .container__home {
       .title__home {
         h1 {
@@ -45,12 +45,10 @@
     }
   }
 }
+
 @media (max-width: 758px) {
-
-.container__home {
-  width: 90%;
-
-}
-
+  .container__home {
+    width: 90%;
+  }
 }
 

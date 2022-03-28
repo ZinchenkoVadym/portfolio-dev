@@ -1,51 +1,70 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../../App.css'
 import './Header.scss'
 
 const Header = () => {
-    let [active, setActive] = useState(false);
-    let navItem = [
+
+    const [navItem, setNavItem] = useState([
         {
             href: '#home',
-            name: 'Home'
+            name: 'Home',
+            active: false
         },
         {
             href: '#about',
-            name: 'About'
+            name: 'About',
+            active: false
         },
         {
             href: '#projects',
-            name: 'Projects'
+            name: 'Projects',
+            active: false
         },
         {
             href: '#contacts',
-            name: 'Contacts'
+            name: 'Contacts',
+            active: false
         }
 
-    ];
+    ]);
+    let [active, setActive] = useState(false);
 
-    let activeBurger = ['span_burger']
-    let activeMenu = ['menu']
-    if (active) {
-        activeBurger.push('active_burger')
-        activeMenu.push('active')
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+               setNavItem(navItem.map((link) => {
+                    link.active = false
+                    if(link.href.replace('#','') === entry.target.id) link.active = true
+
+                    return link
+                }))
+            }
+        })
+    }, {threshold: 0.3})
+
+    useEffect(() => {
+        let items = document.querySelectorAll('.section')
+        items.forEach((section) => {
+            observer.observe(section)
+               })
+    },[])
 
     return (
         <header className='header'>
             <div className='container container__header' onClick={() => {setActive(!active)}}>
                 <div className='header__logo'>Portfolio</div>
-                <div><div className="burger">
-                        <span className={activeBurger.join(' ')}>
+                <div>
+                    <div className="burger">
+                        <span className={active? 'active_burger' : null}>
                         </span>
                     </div>
-                    <ul className={activeMenu.join(' ')}>
+                    <ul className={`menu${active ? ' active' : ''}`}>
                         {navItem.map((e) => {
                             return <li
                                 key={e.name}
                                 onClick={() => setActive(!active)}
                             >
-                                <a href={e.href}>{e.name}</a>
+                                <a className={e.active ? 'active' : null} href={e.href}>{e.name}</a>
                             </li>
                         })}
                     </ul>
