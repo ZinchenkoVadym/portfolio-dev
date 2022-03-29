@@ -93,8 +93,6 @@
           background-color: #f9004d;
           transition: 0.5s;
         }
-
-
       }
       .comp {
         &:hover {
@@ -118,6 +116,7 @@
     }
   }
 }
+
 
 @keyframes spin {
   100% {

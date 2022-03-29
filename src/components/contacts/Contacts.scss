@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
 .section__contacts {
   background-color: #1c1c1c;
     padding-top: 50px;
@@ -41,6 +43,9 @@
             width: 100%;
             display: flex;
             align-items: center;
+            font-family: 'Playfair Display', serif;
+            color:   rgba(107,107,107,0.86);
+            font-size: 14px;
             .not__valid__input {
               padding-left: 15px;
               width: 100%;
@@ -94,10 +99,26 @@
       border-radius: 20px;
     }
   }
-
 }
-
-@media (max-width: 935px) {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: rgba(107, 107, 107, 0.86);
+  -webkit-box-shadow: inset 0 0 0 50px #1c1c1c;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:-webkit-autofill::first-line {
+  color:   rgba(107,107,107,0.86);
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+}
+  @media (max-width: 935px) {
   .section__contacts {
     .container__contacts {
       display: block;

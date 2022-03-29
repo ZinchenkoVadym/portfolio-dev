@@ -49,15 +49,12 @@ export default function BasicTabs() {
                     allowScrollButtonsMobile={true}
                 >
                     <Tab sx={{
-
-                        padding: '0 5px',
                         color: 'white',
                         '&.Mui-selected': {
                             color: '#f9004d',
                         },
                     }} label="Technical Skills" {...a11yProps(0)}/>
                     <Tab sx={{
-                        padding: '0 5px',
                         color: 'white',
                         '&.Mui-selected': {
                             color: '#f9004d',

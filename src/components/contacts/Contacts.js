@@ -40,7 +40,7 @@ const Contacts = () => {
                                 zinchenkovadym@gmail.com</p>
                         </div>
                         <div>
-                            <form className='form' onSubmit={handleSubmit(onSubmit)}>
+                            <form className='form' onSubmit={handleSubmit(onSubmit)} >
                                 <div className='input__validation'>
                                     {errors?.name && <p className='not__valid__input'>{errors?.name?.message}!</p>}
                                 </div>

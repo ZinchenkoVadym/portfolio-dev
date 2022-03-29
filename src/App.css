@@ -77,13 +77,21 @@ textarea{
 }
 ::-webkit-input-placeholder { /* WebKit browsers */
   color:    rgba(107,107,107,0.86);
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
   color:   rgba(107,107,107,0.86);
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
   color:   rgba(107,107,107,0.86);
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color:    rgba(107,107,107,0.86);
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
 }
