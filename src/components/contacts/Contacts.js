@@ -56,7 +56,7 @@ const Contacts = () => {
                                             message: 'MaxLength 12 elements'
                                         },
                                         pattern: {
-                                            value: /^([а-яё]{1,23}|[a-z]{1,12})$/,
+                                            value: /^([а-яёА-ЯË]{1,23}|[a-zA-Z]{1,12})$/,
                                             message: 'Name must contain only liters'
                                         }
                                     })}
@@ -96,7 +96,7 @@ const Contacts = () => {
                                             message: 'MaxLength 12 elements'
                                         },
                                         pattern: {
-                                            value: /^([а-яё]{1,23}|[a-z]{1,12})$/,
+                                            value: /^([а-яёА-ЯË]{1,23}|[a-zA-Z]{1,12})$/,
                                             message: 'Subject must contain only liters'
                                         }
                                     })}
