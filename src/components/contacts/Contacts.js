@@ -1,28 +1,131 @@
 import React from 'react';
 import './Contacts.scss'
+import {useForm} from 'react-hook-form'
+import emailjs from 'emailjs-com'
 
 const Contacts = () => {
+    const {
+        register,
+        formState: {
+            errors,
+            isValid
+        },
+        reset,
+        handleSubmit
+    } = useForm({
+        mode: 'all'
+    })
+
+
+    const onSubmit = (data) => {
+        emailjs.send('gmail', 'resume-feedback', data, 'Z7bCKp0B8j2HqEOQJ')
+            .then(
+                (result) => {
+                    console.log(result.text);
+                },
+                (error) => {
+                    console.log(error.text);
+                });
+        reset()
+    }
+
     return (
         <section id='contacts' className='section section__contacts'>
             <div className='container container__contacts'>
                 <div className='contacts__form'>
                     <div className='contacts__form__body'>
-                            <div className='text__form'>
-                                <h3>Hire Me.</h3>
-                                <p>I am available for work. Connect with me via phone: 0939664520 or email:
-                                    zinchenkovadym@gmail.com</p>
-                            </div>
-                            <div>
-                                <form type='submit' className='form'>
-                                    <input className='input__form' placeholder='Your Name*' type="text"/>
-                                    <input className='input__form' placeholder='Your Email*' type="text"/>
-                                    <input className='input__form' placeholder='Write a Subject' type="text"/>
-                                    <textarea className='textarea__form' placeholder='Your Message'>
-                            </textarea>
-                                    <button>Submit</button>
-                                </form>
-                            </div>
+                        <div className='text__form'>
+                            <h3>Hire Me.</h3>
+                            <p>I am available for work. Connect with me via phone: 0939664520 or email:
+                                zinchenkovadym@gmail.com</p>
                         </div>
+                        <div>
+                            <form className='form' onSubmit={handleSubmit(onSubmit)}>
+                                <div className='input__validation'>
+                                    {errors?.name && <p className='not__valid__input'>{errors?.name?.message}!</p>}
+                                </div>
+                                <input
+                                    {...register('name', {
+                                        required: 'The string must not be empty',
+                                        minLength: {
+                                            value: 2,
+                                            message: 'MinLength 2 elements'
+                                        },
+                                        maxLength: {
+                                            value: 12,
+                                            message: 'MaxLength 12 elements'
+                                        },
+                                        pattern: {
+                                            value: /^([а-яё]{1,23}|[a-z]{1,12})$/,
+                                            message: 'Name must contain only liters'
+                                        }
+                                    })}
+                                    name='name'
+                                    autoComplete='off'
+                                    className='input__form'
+                                    placeholder='Your Name*'
+                                />
+                                <div className='input__validation'>
+                                    {errors?.email && <p className='not__valid__input'>{errors?.email?.message}!</p>}
+                                </div>
+                                <input
+                                    {...register('email', {
+                                        required: 'The string must not be empty',
+                                        pattern: {
+                                            value: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
+                                            message: 'Not valid email'
+                                        }
+                                    })}
+                                    name='email'
+                                    autoComplete='off'
+                                    className='input__form'
+                                    placeholder='Your Email*'
+                                />
+                                <div className='input__validation'>
+                                    {errors?.subject && <p className='not__valid__input'>{errors?.subject?.message}!</p>}
+                                </div>
+                                <input
+                                    {...register('subject', {
+                                        required: 'The string must not be empty',
+                                        minLength: {
+                                            value: 2,
+                                            message: 'MinLength 2 elements'
+                                        },
+                                        maxLength: {
+                                            value: 12,
+                                            message: 'MaxLength 12 elements'
+                                        },
+                                        pattern: {
+                                            value: /^([а-яё]{1,23}|[a-z]{1,12})$/,
+                                            message: 'Subject must contain only liters'
+                                        }
+                                    })}
+                                    name='subject'
+                                    className='input__form'
+                                    placeholder='Write a Subject*'/>
+                                <div className='input__validation'>
+                                    {errors?.message && <p className='not__valid__input'>{errors?.message?.message}!</p>}
+                                </div>
+                                <textarea
+                                    {...register('message', {
+                                        required: 'The string must not be empty',
+                                        minLength: {
+                                            value: 2,
+                                            message: 'MinLength 2 elements'
+                                        },
+                                        maxLength: {
+                                            value: 320,
+                                            message: 'MaxLength 320 elements'
+                                        }
+                                    })}
+                                    name='message'
+                                    className='textarea__form'
+                                    placeholder='Your Message*'>
+                            </textarea>
+                                <button type="submit" disabled={!isValid}>Submit</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
                 <div className='contacts__img'>
                 </div>

@@ -56,7 +56,7 @@ const Projects = () => {
                 }))
             }
         })
-    }, {threshold: 1})
+    }, {threshold: 0.8})
 
     useEffect(() => {
         if (isMobile.any()) {

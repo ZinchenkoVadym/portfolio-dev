@@ -52,7 +52,7 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='container container__header' onClick={() => {setActive(!active)}}>
-                <div className='header__logo'>Portfolio</div>
+                <div className='header__logo'>Zinchenko Vadym</div>
                 <div>
                     <div className="burger">
                         <span className={active? 'active_burger' : null}>

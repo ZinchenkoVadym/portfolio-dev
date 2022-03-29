@@ -63,13 +63,7 @@ export default function BasicTabs() {
                             color: '#f9004d',
                         },
                     }} label=" Soft Skills" {...a11yProps(1)}/>
-                    <Tab sx={{
-                        padding: '0 5px',
-                        color: 'white',
-                        '&.Mui-selected': {
-                            color: '#f9004d',
-                        },
-                    }} label="Education" {...a11yProps(2)}/>
+
                 </Tabs>
             </Box>
                 <TabPanel
@@ -95,12 +89,7 @@ export default function BasicTabs() {
                     <li>Creativity</li>
                 </ul>
             </TabPanel>
-            <TabPanel value={value} index={2}>
-                <div className='education'>
-               <p>Kharkiv State Academy of Food Technology and Management</p>
-                    <p>Commodity science and Commercial Activity</p>
-                </div>
-            </TabPanel>
+
         </Box>
     );
 }
