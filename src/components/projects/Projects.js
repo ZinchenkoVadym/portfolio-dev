@@ -9,17 +9,20 @@ const Projects = () => {
             numberProject: 'Landing page',
             aboutProject: 'This project is a simple layout. In this project I use css, html, jquery',
             id: 1,
-            active: false
+            active: false,
+            href: 'https://landing-build-project.vercel.app'
         },
         {numberProject: 'Weather App',
             aboutProject: 'This project is a React application. In this project I use React, Redux, WeatherMapApi, GooglePlacesApi',
             id: 2,
-            active: false
+            active: false,
+            href: 'https://weather-api-test-inky.vercel.app'
         },
         {numberProject: 'Authorization App',
             aboutProject: 'This project is a React application. In this project I use React, Redux',
             id: 3,
-            active: false
+            active: false,
+            href: 'https://weather-api-test-inky.vercel.app'
         }
     ]);
     let isMobile = {
@@ -84,7 +87,7 @@ const Projects = () => {
                                 <h4>{card.numberProject}</h4>
                                     <p>{card.aboutProject}</p>
                                     <button className='project_btn'>
-                                        <a target='_blank' href='https://weather-api-test-inky.vercel.app'>Look project</a>
+                                        <a target='_blank' href={card.href}>Look project</a>
                                     </button>
                             </div>
                         </div>

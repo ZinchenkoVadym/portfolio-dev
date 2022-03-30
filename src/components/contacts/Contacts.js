@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Contacts.scss'
 import {useForm} from 'react-hook-form'
 import emailjs from 'emailjs-com'
 
 const Contacts = () => {
+
     const {
         register,
         formState: {
