@@ -35,12 +35,11 @@ const Header = () => {
                setNavItem(navItem.map((link) => {
                     link.active = false
                     if(link.href.replace('#','') === entry.target.id) link.active = true
-
                     return link
                 }))
             }
         })
-    }, {threshold: 0.3})
+    }, {threshold: 0.5})
 
     useEffect(() => {
         let items = document.querySelectorAll('.section')
@@ -59,7 +58,7 @@ const Header = () => {
                         </span>
                     </div>
                     <ul className={`menu${active ? ' active' : ''}`}>
-                        {navItem.map((e) => {
+                            {navItem.map((e) => {
                             return <li
                                 key={e.name}
                                 onClick={() => setActive(!active)}
