@@ -10,7 +10,7 @@ const Projects = () => {
             aboutProject: 'This project is a simple layout. In this project I use css, html, jquery',
             id: 1,
             active: false,
-            href: 'https://landing-prod.vercel.app/'
+            href: 'landing-prod.vercel.app'
         },
         {numberProject: 'Weather App',
             aboutProject: 'This project is a React application. In this project I use React, Redux, WeatherMapApi, GooglePlacesApi',

@@ -31,6 +31,7 @@ const Header = () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+            console.log(entry)
             if (entry.isIntersecting) {
                setNavItem(navItem.map((link) => {
                     link.active = false
@@ -39,7 +40,7 @@ const Header = () => {
                 }))
             }
         })
-    }, {threshold: 0.5})
+    }, {threshold: 0.2})
 
     useEffect(() => {
         let items = document.querySelectorAll('.section')

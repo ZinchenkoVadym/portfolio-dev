@@ -6,7 +6,6 @@ const Footer = () => {
     return (
         <section className='footer'>
             <div className='container container__footer'>
-
                 <h2>My portfolio © 2022 </h2>
             </div>
         </section>
