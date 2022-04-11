@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import './Projects.scss'
+import './Projects.scss';
 
 const Projects = () => {
 
-    let [mobile, setMobile] = useState(false)
+    let [mobile, setMobile] = useState(false);
     let [cards, setCard] = useState([
         {
             numberProject: 'Landing page',
@@ -13,13 +13,13 @@ const Projects = () => {
             href: 'https://landing-prod.vercel.app'
         },
         {numberProject: 'Weather App',
-            aboutProject: 'This project is a React application. In this project I use React, Redux, WeatherMapApi, GooglePlacesApi',
+            aboutProject: 'This project is a React application. In this project I use React, Redux, WeatherMapApi',
             id: 2,
             active: false,
             href: 'https://weather-api-test-inky.vercel.app'
         },
         {numberProject: 'Authorization App',
-            aboutProject: 'This project is a React application. In this project I use React, Redux',
+            aboutProject: 'This project is under development',
             id: 3,
             active: false,
             href: ''
@@ -50,25 +50,25 @@ const Projects = () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 setCard(cards.map((card) => {
-                    card.active = false
+                    card.active = false;
                     if(card.id.toString() === entry.target.id) {
-                        card.active = true
+                        card.active = true;
                     }
                     return card
-                }))
+                }));
             }
-        })
-    }, {threshold: 0.8})
+        });
+    }, {threshold: 0.8});
 
     useEffect(() => {
         if (isMobile.any()) {
-            setMobile(true)
+            setMobile(true);
         }
-        let cardsItem = document.querySelectorAll('.card')
+        let cardsItem = document.querySelectorAll('.card');
         cardsItem.forEach((section) => {
-            observer.observe(section)
-        })
-    },[])
+            observer.observe(section);
+        });
+    },[]);
 
     return (
         <section className='section section__projects' id='projects'>
@@ -79,7 +79,7 @@ const Projects = () => {
                     <div className='projects__cards'>
                     {cards.map((card) => {
                         return <div
-                            className={`card${card.active && mobile ? ' active' : ''}${!mobile ? ' comp': ''}`}
+                            className={`card${card.active && mobile ? ' active' : ''}${!mobile ? ' desktop': ''}`}
                             id={card.id}
                             key={card.id}>
                             <h3>{card.numberProject}</h3>
@@ -88,7 +88,7 @@ const Projects = () => {
                                 <h4>{card.numberProject}</h4>
                                     <p>{card.aboutProject}</p>
                                     <button className='project_btn'>
-                                        <a target='_blank' href={card.href}>Look project</a>
+                                        <a className='link' target='_blank' href={card.href}>Look project</a>
                                     </button>
                             </div>
                         </div>

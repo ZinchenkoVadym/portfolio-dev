@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import './Contacts.scss'
-import {useForm} from 'react-hook-form'
-import emailjs from 'emailjs-com'
+import './Contacts.scss';
+import {useForm} from 'react-hook-form';
+import emailjs from 'emailjs-com';
 
 const Contacts = () => {
 
@@ -15,7 +15,7 @@ const Contacts = () => {
         handleSubmit
     } = useForm({
         mode: 'all'
-    })
+    });
 
 
     const onSubmit = (data) => {
@@ -27,8 +27,8 @@ const Contacts = () => {
                 (error) => {
                     console.log(error.text);
                 });
-        reset()
-    }
+        reset();
+    };
 
     return (
         <section id='contacts' className='section section__contacts'>

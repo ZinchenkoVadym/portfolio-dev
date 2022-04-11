@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import '../../App.css'
-import './Header.scss'
+import '../../App.css';
+import './Header.scss';
 
 const Header = () => {
 
@@ -31,35 +31,36 @@ const Header = () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            console.log(entry)
             if (entry.isIntersecting) {
-               setNavItem(navItem.map((link) => {
-                    link.active = false
-                    if(link.href.replace('#','') === entry.target.id) link.active = true
-                    return link
-                }))
+                setNavItem(navItem.map((link) => {
+                    link.active = false;
+                    if (link.href.replace('#', '') === entry.target.id) link.active = true;
+                    return link;
+                }));
             }
-        })
-    }, {threshold: 0.2})
+        });
+    }, {threshold: 0.2});
 
     useEffect(() => {
-        let items = document.querySelectorAll('.section')
+        let items = document.querySelectorAll('.section');
         items.forEach((section) => {
-            observer.observe(section)
-               })
-    },[])
+            observer.observe(section);
+        })
+    }, []);
 
     return (
         <header className='header'>
-            <div className='container container__header' onClick={() => {setActive(!active)}}>
+            <div className='container container__header' onClick={() => {
+                setActive(!active)
+            }}>
                 <div className='header__logo'>Zinchenko Vadym</div>
                 <div>
                     <div className="burger">
-                        <span className={active? 'active_burger' : null}>
+                        <span className={active ? 'active_burger' : null}>
                         </span>
                     </div>
                     <ul className={`menu${active ? ' active' : ''}`}>
-                            {navItem.map((e) => {
+                        {navItem.map((e) => {
                             return <li
                                 key={e.name}
                                 onClick={() => setActive(!active)}

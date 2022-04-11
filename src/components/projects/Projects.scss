@@ -10,6 +10,7 @@
     margin: 0 auto;
 
     .title__projects {
+
       h2 {
         font-size: 64px;
         color: white;
@@ -21,6 +22,7 @@
       display: flex;
       margin: 0 -15px;
       padding: 0 15px;
+
       .card {
         width: 33.3%;
         position: relative;
@@ -40,6 +42,7 @@
           letter-spacing: 2px;
           opacity: 1;
         }
+
         .card__body {
           position: absolute;
           width: 100%;
@@ -56,7 +59,8 @@
             letter-spacing: 2px;
             opacity: 1;
             margin-bottom: 15px;
-}
+          }
+
           svg {
             text-align: center;
             animation: spin 2s infinite linear;
@@ -74,8 +78,10 @@
             border-radius: 10px;
             letter-spacing: 1px;
             cursor: pointer;
+
             a {
               color: white;
+              width: 100%;
             }
           }
         }
@@ -94,19 +100,24 @@
           transition: 0.5s;
         }
       }
-      .comp {
+
+      .desktop {
+
         &:hover {
           -webkit-transform: scale(1.03);
           -ms-transform: scale(1.03);
           transform: scale(1.03);
           transition: 0.5s;
+
           h3 {
             opacity: 0;
           }
+
           &:before {
             opacity: 1;
             transition: 1s;
           }
+
           .card__body {
             transition: 1s;
             opacity: 1;
@@ -125,16 +136,22 @@
 }
 
 @media (max-width: 900px) {
+
   .section__projects {
+
     .container__projects {
+
       .title__projects {
+
         h2 {
           font-size: 38px;
         }
       }
+
       .projects__cards {
         flex-wrap: wrap;
         justify-content: center;
+
         .card {
           width: 40%;
           margin-top: 20px;
@@ -146,6 +163,7 @@
 
 @media (max-width: 700px) {
   .section__projects {
+
     .container__projects {
 
       .projects__cards {
@@ -157,11 +175,13 @@
           height: 450px;
           margin-bottom: 30px;
         }
+
         .active {
           -webkit-transform: scale(1.03);
           -ms-transform: scale(1.03);
           transform: scale(1.03);
           transition: 0.5s;
+
           &:before {
             opacity: 1;
             transition: 1s;
@@ -185,10 +205,13 @@
 
 @media (max-width: 500px) {
   .section__projects {
+
     .container__projects {
+
       .projects__cards {
         flex-wrap: wrap;
         justify-content: center;
+
         .card {
           width: 90%;
           height: 450px;
