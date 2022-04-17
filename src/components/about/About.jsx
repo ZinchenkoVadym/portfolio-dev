@@ -15,7 +15,7 @@ const About = () => {
           <div className='about__me'>
             <div className='about__text'>
               <h2> About Me</h2>
-              I am interested in challenging projects
+              <p>I am interested in challenging projects
               and ready to solve difficult tasks using my
               creative thinking. I am constantly improving
               my skills by creating my own projects. I
@@ -28,7 +28,7 @@ const About = () => {
               a new and exciting path for me in this field but
               I am a very fast learner with a self
               motivated personality who is willing to work
-              hard and give it my all.
+              hard and give it my all.</p>
             </div>
             <div className='about__tabs'>
               <BasicTabs/>
