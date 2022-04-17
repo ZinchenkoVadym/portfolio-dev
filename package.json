@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "dependencies": {
+    "emailjs-com": "^3.2.0",
+    "react-hook-form": "^7.28.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.29.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZinchenkoVadym/portfolio-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZinchenkoVadym/portfolio-dev/issues"
+  },
+  "homepage": "https://github.com/ZinchenkoVadym/portfolio-dev#readme"
+}
