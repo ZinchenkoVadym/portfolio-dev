@@ -7,13 +7,17 @@
     "emailjs-com": "^3.2.0",
     "react-hook-form": "^7.28.1"
   },
+
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.29.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
