@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import './TabsMU.scss';
 
 const TabPanel = (props) => {
+  // eslint-disable-next-line react/prop-types
   const {children, value, index, ...other} = props;
   return (
     <div
@@ -23,6 +24,7 @@ const TabPanel = (props) => {
     </div>
   );
 };
+
 
 const a11yProps = (index) => {
   return {
