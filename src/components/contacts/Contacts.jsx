@@ -77,6 +77,7 @@ const Contacts = () => {
                   {...register('email', {
                     required: 'The string must not be empty',
                     pattern: {
+                      // eslint-disable-next-line max-len
                       value: /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
                       message: 'Not valid email',
                     },

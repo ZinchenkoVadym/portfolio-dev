@@ -33,6 +33,7 @@ const Header = () => {
       if (entry.isIntersecting) {
         setNavItem(navItem.map((link) => {
           link.active = false;
+          // eslint-disable-next-line max-len
           if (link.href.replace('#', '') === entry.target.id) link.active = true;
           return link;
         }));
@@ -64,7 +65,9 @@ const Header = () => {
                 key={e.name}
                 onClick={() => setActive(!active)}
               >
-                <a className={e.active ? 'active' : null} href={e.href}>{e.name}</a>
+                <a className={e.active ? 'active' : null} href={e.href}>
+                  {e.name}
+                </a>
               </li>;
             })}
           </ul>
